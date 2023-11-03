@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>document index page</title>
+</head>
+<body>
+    <h1>Document Home</h1>
+    <section>
+        <h2>Document List</h2>
+        <!--                    this is unordered list, be presented in bullet point-->
+        <ul>
+            <!--running a for loop to list every doc in the database-->
+            <% for(const doc of data) { %>
+                <li>
+                    <% if (doc.title.trim().length === 0) {
+                        // if the title is empty or has no character other than white space
+                        // display the title to be empty_title, this is necessary to enable
+                        // hyperlink for detail page of this document/object
+                        doc.title = "empty_title"
+                    }%>
+                    <a href="/document/detail/<%= doc._id %>"><%= doc.title %></a>
+                </li>
+            <% } %>
+        </ul>
+        <a href="/document/create">Create</a>
+    </section>
+</body>
+</html>

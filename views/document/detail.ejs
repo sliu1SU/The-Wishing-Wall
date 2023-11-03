@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>detail page</title>
+</head>
+<body>
+    <h1>Detail</h1>
+    <p>Title: <%= title %></p>
+    <p>Content: <%= content %></p>
+    <p>Last Updated At: <%= time %></p>
+<!--    this is just hyperlink, redirect to edit page, index page-->
+    <a href="/document/edit/<%=_id%>">Edit</a>
+    <a href="/document">Index Page</a>
+    <form method="POST" action="/document/delete/<%=_id%>" >
+        <button>Delete</button>
+    </form>
+</body>
+</html>
