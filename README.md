@@ -2,7 +2,7 @@
 A wishing wall for you to write down your wishes!
 
 ## backend:
-MongoDB'\n'
+MongoDB<br />
 Node.js (Express.js)
 
 ## frontend:
